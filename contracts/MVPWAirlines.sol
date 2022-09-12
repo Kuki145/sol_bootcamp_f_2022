@@ -172,6 +172,13 @@ contract MVPWAirlines is Ownable, IMVPWAirlines {
 
         // Transfer tokens
         tokenContract.transferFrom(msg.sender, address(this), totalCost);
+
+        emit TicketsPurchased(
+            _flightID,
+            msg.sender,
+            _numberOfEconomyClassSeats,
+            _numberOfFirstClassSeats
+        );
     }
 
     /// @inheritdoc IMVPWAirlines
