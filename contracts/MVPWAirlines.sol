@@ -70,11 +70,15 @@ contract MVPWAirlines is Ownable, IMVPWAirlines {
     /// @inheritdoc IMVPWAirlines
     function holdAirplane(uint32 _airplaneID) external onlyOwner {
         airplanes[_airplaneID].isOnHold = true;
+
+        emit AirplanePutOnHold(_airplaneID);
     }
 
     /// @inheritdoc IMVPWAirlines
     function releaseAirplane(uint32 _airplaneID) external onlyOwner {
         airplanes[_airplaneID].isOnHold = false;
+
+        emit AirplaneReleased(_airplaneID);
     }
 
     /// @inheritdoc IMVPWAirlines

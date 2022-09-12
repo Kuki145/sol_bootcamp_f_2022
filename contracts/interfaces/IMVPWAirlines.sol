@@ -38,6 +38,14 @@ interface IMVPWAirlines {
         uint16 firstClassCapacity
     );
 
+    /// @notice Event denoting that an airplane has been put on hold
+    /// @param airplaneID The uint32 ID of the airplane
+    event AirplanePutOnHold(uint32 airplaneID);
+
+    /// @notice Event denoting that an airplane has been put off of hold
+    /// @param airplaneID The uint32 ID of the airplane
+    event AirplaneReleased(uint32 airplaneID);
+
     /// @notice Event denoting that a new flight has been created/announced
     /// @param airplaneID The uint32 ID of the airplane
     /// @param flightID The uint32 ID of the flight
