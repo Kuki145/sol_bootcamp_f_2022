@@ -11,3 +11,9 @@ GAS_REPORT=true npx hardhat test
 npx hardhat node
 npx hardhat run scripts/deploy.js
 ```
+
+# Questions
+
+* How is the money transferred during a purchase? Do we check for ERC20 allowance?
+* Do we outright block cancelling tickets after departure time?
+* 

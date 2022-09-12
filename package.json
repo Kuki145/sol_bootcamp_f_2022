@@ -2,6 +2,15 @@
   "name": "hardhat-project",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^1.0.2",
+    "@nomiclabs/hardhat-etherscan": "^3.1.0",
     "hardhat": "^2.11.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.7.3",
+    "dotenv": "^16.0.2"
+  },
+  "scripts": {
+    "hh-compile": "hardhat compile",
+    "hh-deploy": "hardhat run scripts/deploy.js --network goerli"
   }
 }
